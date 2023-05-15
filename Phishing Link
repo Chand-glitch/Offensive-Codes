@@ -1,0 +1,9 @@
+cd Desktop
+mkdir <folder_name>
+cd <folder_name>
+git clone https://github.com/xHak9x/SocialPhish.git
+ls
+cd Socialphish
+ls
+chmod +x socialphish.sh
+./socialphish.sh
